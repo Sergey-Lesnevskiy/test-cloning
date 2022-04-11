@@ -139,7 +139,6 @@ width: 502px;
 }
 
 .main_foto_only{
- 
 width: 698px;
 height: 728px;
 
@@ -342,7 +341,7 @@ font-style: normal;
   border-radius: 100px;
 }
 .arrow:hover{
-  border: 2px solid #cac7c7;
+  background-color:rgba(241, 205, 179, 1);
 }
 .arrow_left_right{
   width: 16px;
