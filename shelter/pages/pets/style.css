@@ -21,6 +21,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain; /*не меняло пропорции и сохраняло соотношение сторон */
+  display: block;
   flex-shrink: 0; /*избежать икажения изоьражения*/
 }
 a {
@@ -378,6 +379,95 @@ input {
   letter-spacing: 0.06em;
   color: #f1cdb3;
 }
+/*popub start*/
+.popub{ 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.8);
+  top:0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+}
+.popub.open{
+  opacity: 1;
+  visibility: visible;
+}
+.popub.open .popub_content{
+  transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+opacity: 1;
+}
+.popub_body{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+ 
+.popub_content{
+  background-color: #f6f6f6;
+  color: #211f20;
+  max-width: 952px;
+  height: 552px;
+  border-radius: 9px;
+  position: relative;
+  transition: all 0.3 ease 0s;
+  opacity: 0;
+  transform: translate(0px, -100%);
+  
+}
+
+  .popub_conteiner_close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #f1cdb3;
+   margin-left:900px;
+  }
+.popub_close_center{
+
+width: 12px;height: 12px;
+
+}
+ .conteiner_pets{
+ display: flex; 
+}
+.popub_img_pets{
+width: 500px;
+height: 500px;
+background-color: #FFFFFF;
+
+border-radius:0 0 0  9px  ;
+}
+.popub_img{
+  border-radius:0 0 0  9px  ;
+}
+.popub_text{
+  width: 400px;
+  height: 500px;
+  background-color: rgb(162, 198, 131);
+}
+  .popub_text_name{}
+.popub_text_breed{}
+.popub_text_description{}
+
+
+
+
+
+
+
+
+
+
+
+/*popub end*/
 @media (max-width: 1279px) {
   .header_wrapp {
     padding-top: 30px;
@@ -461,31 +551,183 @@ input {
     .header_nav {
       display: none;
     }
-    .header_wrapp {
-      margin-left: 10px;
-      /* justify-content: start; */
-      margin-right: 53px;
-    }
-    .header_logo {
-      margin-right: 14%;
-    }
-    /* .header_descripton_logo {
-      padding-left: 4px;
-    } */
-    .burger {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 22px;
-      background-color: inherit;
-    }
-    .burger_line {
-      display: inline-block;
-      width: 30px;
-      height: 0px;
-      border: 1px solid #000000;
-    }
+
+
+/*бургер меню*/
+/*бургер меню*/
+
+
+/* стилизуем кнопку */
+
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 43px;
+  left:calc(100% - 58px); 
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 3;
+
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color:  #F1CDB3;
+  transition: 0.6s;
+  transform-style: preserve-3d; 
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+/* контейнер меню */
+.burger_center {
+  display: block;
+  position: fixed;
+  /* visibility: hidden; */
+  top: 0;
+ /* left: calc(100% - 300px); */
+  right: -100%;
+  width: 320px;
+  height: 100%;
+  margin: 0;
+ transition: all 0.3s ease 0.3s;
+  list-style: none;
+  text-align: center;
+background: #292929;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  
+}
+/* элементы меню */
+.title_burger{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 184px;
+  height: 35px;
+  
+}
+.title_burger h1{
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  color: #F1CDB3;
+  margin-bottom: 158px;
+}
+.subtitle_burger{
+  width: 179px;
+height: 15px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+margin-left: 14px;
+
+margin-bottom: 158px;
+}
+.subtitle_burger p{
+letter-spacing: 0.09em;
+color: #FFFFFF;
+}
+.burger_center{
+
+
+text-decoration: none
+}
+
+
+.menu__box{
+  list-style-type: none;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 327px;
+}
+.menu__item {
+ 
+  margin-bottom: 43px;
+  color: #FAFAFA;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  text-decoration: none;
+ 
+}
+ .menu__item:hover {
+border-bottom:2px solid #F1CDB3;;
+}
+
+.menu__btn.active > span {
+  transition: 0.6s;
+  transform-style: preserve-3d; 
+        
+transform: rotate(90deg);
+
+}
+
+.burger_center.active {
+overflow: auto;
+ transition: all 0.3s ease 0.3s;
+ -webkit-transition: all 0.3s ease 0.3s;
+ -moz-transition: all 0.3s ease 0.3s;
+ -o-transition: all 0.3s ease 0.3s;
+
+right: 0
+
+} 
+
+
+
+/*закончили с кнопкой*/
+
+
+  .header_wrapp {
+    margin-left: 10px;
+    justify-content: start;
+    margin-right: 0;
+  }
+  .header_logo {
+    margin-right: 14%;
+  }
+  .main_header {
+    height: 823px;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 43px;
+    left: calc(100% - 58px);
+    width: 30px;
+    height: 22px;
+    background-color: inherit;
+    z-index: 3;
+  }
+  .burger_line {
+    display: inline-block;
+    width: 30px;
+    height: 0px;
+    border: 1px solid rgba(241, 205, 179, 1);
+  }
     .our_friends {
       width: 100%;
       height: 1649px;
