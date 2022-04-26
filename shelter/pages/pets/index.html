@@ -10,7 +10,7 @@
     <script src="index.js" defer></script>
     <title>Shelter_page_2</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <div class="header_wrapp wrapper">
         <div class="header_logo">
@@ -22,11 +22,29 @@
           </a>
         </div>
 
-        <button class="burger">
-          <span class="burger_line"></span>
-          <span class="burger_line"></span>
-          <span class="burger_line"></span>
-        </button>
+        <div class="burger">
+          <!-- <input id="menu__toggle" type="checkbox" /> -->
+          <div class="menu__btn">
+            <span></span>
+          </div>
+      <div class="burger_center">
+        <div class="lable_burger">
+          <div class="title_burger"><h1>Cozy House</h1></div>
+          <div class="subtitle_burger"><p>Shelter for pets in Boston</p>
+            </div>
+        </div>
+      
+          <ul class="menu__box">
+      
+            <li><a class="menu__item" href="../main/index.html">About the shelter</a></li>
+            <li><a class="menu__item" href="#">Our pets</a></li>
+            <li><a class="menu__item" href="../main/index.html#help">Help the shelter</a></li>
+            <li><a class="menu__item" href="#contacts">Contacts</a></li>
+          
+          </ul>
+      
+      </div>
+        </div>
         <nav class="header_nav">
           <div class="header_list">
             <ul class="header_list_ul list-reset">
@@ -61,56 +79,56 @@
           </h1>
         </div>
         <div class="cards_container">
-          <div class="card">
+          <div class="card popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/pets-katrine.png" alt="" />
             </div>
             <p class="name">Katrine</p>
             <button class="button our_pets_slider_button">Learn more</button>
           </div>
-          <div class="card">
+          <div class="card popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/pets-jennifer.png" alt="" />
             </div>
             <p class="name">Jennife</p>
             <button class="button our_pets_slider_button">Learn more</button>
           </div>
-          <div class="card">
+          <div class="card popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/pets-woody.png" alt="" />
             </div>
             <p class="name">Woody</p>
             <button class="button our_pets_slider_button">Learn more</button>
           </div>
-          <div class="card card_sofia">
+          <div class="card card_sofia popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/sofia.png" alt="" />
             </div>
             <p class="name">Sophia</p>
             <button class="button our_pets_slider_button">Learn more</button>
           </div>
-          <div class="card card_timmy">
+          <div class="card card_timmy popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/pets-timmy.png" alt="" />
             </div>
             <p class="name">Timmy</p>
             <button class="button our_pets_slider_button">Learn more</button>
           </div>
-          <div class="card card_charly">
+          <div class="card card_charly popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/pets-charly.png" alt="" />
             </div>
             <p class="name">Charly</p>
             <button class="button our_pets_slider_button">Learn more</button>
           </div>
-          <div class="card card_scarlett">
+          <div class="card card_scarlett popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/pets-scarlet.png" alt="" />
             </div>
             <p class="name">Scarlett</p>
             <button class="button our_pets_slider_button">Learn more</button>
           </div>
-          <div class="card cards_freddie">
+          <div class="card cards_freddie popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/freddy.png" alt="" />
             </div>
@@ -203,5 +221,30 @@
         </div>
       </div>
     </div> 
+    <div class="popub" id="popub">
+      <div class="popub_body">
+        <div class="popub_content">
+        <div class="popub_conteiner_close">
+        <a href="№" class='popub_close'><div class="popub_close_center"><img src="../../assets/icons/Vector.png" alt=""></div></a>
+      </div>
+      <div class="conteiner_pets">
+         <div class="popub_img_pets"><img src="" alt="" class="popub_img"></div>
+      <div class="popub_text">
+        <div class="popub_text_name"></div>
+        <div class="popub_text_breed"></div>
+       <div class="popub_text_description"></div>
+      <ul>
+        <li>Age:</li>
+        <li>Inoculations:</li>
+        <li>Diseases:</li>
+        <li>Parasites:</li>
+      </ul>
+      </div></div>
+      
+      </div>
+      </div>
+      
+         </div>
+    <script src="script.js"></script>
   </body>
 </html>
