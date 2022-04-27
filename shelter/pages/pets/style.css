@@ -469,6 +469,27 @@ border-radius:0 0 0  9px  ;
 
 /*popub end*/
 @media (max-width: 1279px) {
+
+
+    /*popub*/
+    .popub_content{
+      max-width: 682px;
+      height: 402px;
+    }
+    .popub_img_pets{
+     width: 350px;height: 350px;
+    }
+    .popub_text{
+    width: 280px;
+    height: 350px;
+    
+    }
+    .popub_conteiner_close{
+    margin-left: 621px;
+    }
+  
+    
+     /*popub*/
   .header_wrapp {
     padding-top: 30px;
     height: 90px;
@@ -568,7 +589,7 @@ border-radius:0 0 0  9px  ;
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 3;
+  z-index: 51;
 
 }
 /* добавляем "гамбургер" */
@@ -592,6 +613,18 @@ border-radius:0 0 0  9px  ;
   top: 8px;
 }
 /* контейнер меню */
+.test_blackout{
+  content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.4;
+	z-index: 1;
+  visibility: hidden;
+}
 .burger_center {
   display: block;
   position: fixed;
@@ -607,7 +640,7 @@ border-radius:0 0 0  9px  ;
   text-align: center;
 background: #292929;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-  
+  z-index: 50;
 }
 /* элементы меню */
 .title_burger{
@@ -693,12 +726,33 @@ overflow: auto;
 right: 0
 
 } 
-
+.test_blackout.active{
+  visibility:visible
+}
 
 
 /*закончили с кнопкой*/
 
+/*popub*/ 
+.popub_content{
+  max-width: 270px;
+  height: 393px;
+}
+.popub_img_pets{
+  display: none;
+}
+.popub_text{
+width: 240px;
+height: 341px;
+border-radius: 9px;
+}
+.popub_conteiner_close{
+margin-left: 218px;
+}
 
+
+
+/*popub*/
   .header_wrapp {
     margin-left: 10px;
     justify-content: start;

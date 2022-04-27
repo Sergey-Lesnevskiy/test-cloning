@@ -2,20 +2,22 @@ const burger = document.querySelector('.menu__btn')
 const burgr_Menu = document.querySelector('.burger_center')
 const body = document.querySelector('.body')
 const menuBox= document.querySelector('.menu__box')
+const test_blackout=document.querySelector('.test_blackout')
 
-const popu_links=document.querySelectorAll('.popub_link')
+
+const popub_links=document.querySelectorAll('.popub_link')
 const popub=document.querySelector('.popub')
 const popub_content=document.querySelector('.popub_content')
 const close_popub= document.querySelector('.popub_conteiner_close')
 const popub_img=document.querySelector('.popub_img')
 
-
+console.log(popub_links)
 
 
 //про попаб
-if(popu_links.length > 0){
-  for (let index = 0; index < popu_links.length; index++) {
-     const popubLink=popu_links[index];
+if(popub_links.length > 0){
+  for (let index = 0; index < popub_links.length; index++) {
+     const popubLink=popub_links[index];
      popubLink.addEventListener('click',()=>{
 popub.classList.toggle('open')
 body.classList.toggle('lock')
@@ -51,22 +53,23 @@ menuBox.addEventListener('click',()=>{
     burger.classList.remove('active')
     burgr_Menu.classList.remove('active')
     body.classList.remove('lock')
-  
+    test_blackout.classList.remove('active')
 })
-//это через перебор 
-// const links =document.querySelectorAll('.menu__item')
 
-// for (i = 0; i < links.length; i++) {
-//     links[i].addEventListener('click', function() {
-//       this.style.backgroundColor = 'red';
-//     });
-//   }
+test_blackout.addEventListener( 'click', () => {
+	
+      burger.classList.remove('active')
+      burgr_Menu.classList.remove('active')
+      body.classList.remove('lock')
+      test_blackout.classList.remove('active')
 
+})
 
 burger.addEventListener('click',()=>{
     burger.classList.toggle('active')
     burgr_Menu.classList.toggle('active')
     body.classList.toggle('lock')
+    test_blackout.classList.toggle('active')
    
 })   
 //меню

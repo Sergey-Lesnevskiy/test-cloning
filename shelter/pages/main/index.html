@@ -12,9 +12,9 @@
   </head>
 
   <body class="body">
-    <!-- <div class="site"> -->
+    
 
-    <div class="main_header">
+   <div class="main_header">
       <header class="header">
         <div class="header_wrapp wrapper">
           <div class="header_logo">
@@ -29,9 +29,10 @@
            
   <div class="burger">
     <!-- <input id="menu__toggle" type="checkbox" /> -->
-    <div class="menu__btn">
+      <div class="menu__btn">
       <span></span>
     </div>
+    <div class="test_blackout"></div>
 <div class="burger_center">
   <div class="lable_burger">
     <div class="title_burger"><h1>Cozy House</h1></div>
@@ -48,6 +49,7 @@
     
     </ul>
 
+
 </div>
   </div>
           
@@ -55,7 +57,7 @@
             <div class="header_list">
               <ul class="header_list_ul list-reset">
                <li class="header_item">    <!--  сдесь был бордер -->
-                  <a href="#" class="header_link">About the shelter</a>
+                   <a href="#" class="header_link">About the shelter</a>
                 </li>
                 <li class="header_item">
                   <a href="../pets/index.html" class="header_link">Our pets</a>
@@ -136,7 +138,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
 
     <div class="main_wrapper_our_friends">
       <div class="our_friends" id="our_friends">
@@ -148,13 +150,43 @@
         </div>
 
         <div class="our_friend_slider">
-          <div class="arrow arrow_left_our">
+          <div class="arrow arrow_left_our" id="btn_left">
             <img
               src="../../assets/icons/Arrow.png"
               class="arrow_left_right"
-              alt=""
-            />
+              alt=""/>
           </div>
+
+          <div class="carousel_wrapper" id="carousel_wrapper">
+      <div class="carousel" id="carousel">
+
+        <div class="item" id="item_left">
+            <div class="card card_sofia popub_link">
+              <div class="our_friends_img">
+                <img src="../../assets/images/sofia.png" alt="" />
+              </div>
+              <p class="name">Sophia</p>
+              <button class="button our_pets_slider_button">Learn more</button>
+            </div>
+
+            <div class="card card_charly popub_link">
+              <div class="our_friends_img">
+                <img src="../../assets/images/pets-charly.png" alt="" />
+              </div>
+              <p class="name">Charly</p>
+              <button class="button our_pets_slider_button">Learn more</button>
+            </div>
+           
+        
+            <div class="card card_timmy popub_link">
+              <div class="our_friends_img">
+                <img src="../../assets/images/pets-timmy.png" alt="" />
+              </div>
+              <p class="name">Timmy</p>
+              <button class="button our_pets_slider_button">Learn more</button>
+            </div>
+        </div>    
+  <div class="item" id="item_active">
           <div class="card popub_link">
             <div class="our_friends_img">
               <img src="../../assets/images/pets-katrine.png"  class="img_for_popub"
@@ -181,16 +213,40 @@
               Learn more
             </button>
           </div>
-
-          <div class="arrow">
+  </div>
+          <div class="item" id="item_right">
+            <div class="card card_charly popub_link">
+              <div class="our_friends_img">
+                <img src="../../assets/images/pets-charly.png" alt="" />
+              </div>
+              <p class="name">Charly</p>
+              <button class="button our_pets_slider_button">Learn more</button>
+            </div>
+            <div class="card card_scarlett popub_link">
+              <div class="our_friends_img">
+                <img src="../../assets/images/pets-scarlet.png" alt="" />
+              </div>
+              <p class="name">Scarlett</p>
+              <button class="button our_pets_slider_button">Learn more</button>
+            </div>
+            <div class="card cards_freddie popub_link">
+              <div class="our_friends_img">
+                <img src="../../assets/images/freddy.png" alt="" />
+              </div>
+              <p class="name">Freddie</p>
+              <button class="button our_pets_slider_button">Learn more</button>
+            </div>
+          </div>
+  </div>
+        </div>
+          <div class="arrow" id="btn_right">
             <img
               src="../../assets/icons/Arrow_right.png"
               class="arrow_left_right"
               alt=""
             />
           </div>
-        </div>
-
+       </div>
         <button
           onclick="window.location.href = '../pets/index.html'"
           class="button our_pets_content_button"
@@ -200,7 +256,7 @@
       </div>
     </div>
 
-    <div class="main_wrapper_help">
+     <div class="main_wrapper_help">
       <div class="help" id="help">
         <div class="help_title">
           <h4 class="help_title_text">
@@ -400,7 +456,7 @@
           <img src="../../assets/images/footer-puppy.png" alt="" />
         </div>
       </div>
-    </div> 
+    </div>  
    <div class="popub" id="popub">
      
 <div class="popub_body">
