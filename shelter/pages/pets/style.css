@@ -729,7 +729,9 @@ right: 0
 .test_blackout.active{
   visibility:visible
 }
-
+.body.lock {
+  overflow: hidden;
+}
 
 /*закончили с кнопкой*/
 
